@@ -3,6 +3,7 @@ package org.example.Servicio;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
 import org.example.Entidades.Pista;
 
 import java.sql.SQLException;
@@ -23,7 +24,7 @@ public class ClubService {
      * @returnv devuelve una lista de objetos tipo Pista
      * @author Daniel
      */
-    public List<Pista> cargarPistas() throws SQLException {
+    public List<Pista> cargarPistas() throws PersistenceException {
         EntityManager em = emf.createEntityManager();
 
         List<Pista> pistas = em.createQuery("SELECT p FROM Pista p", Pista.class).getResultList();
@@ -40,7 +41,7 @@ public class ClubService {
      * @return true si se ha insertado correctamente, false si no.
      * @author Daniel
      */
-    public boolean insertarPista(Pista pista) {
+    public boolean insertarPista(Pista pista) throws PersistenceException {
         EntityManager em = emf.createEntityManager();
 
         try {
@@ -61,6 +62,44 @@ public class ClubService {
             return false;
         }
 
+    }
+
+    /**
+     * Modifica el estado de la disponibilidad de la pista
+     *
+     * @param idPista El id de la pista a modificar.
+     * @param seleccionado El nuevo estado de disponibilidad.
+     * @return Devuelve true si se modifico correctamente, false si no.
+     * @Author Daniel
+     */
+    public boolean cambiarDisponibilidadPista(String idPista, Boolean seleccionado) throws PersistenceException {
+        EntityManager em = emf.createEntityManager();
+
+        if (idPista == null) {
+            return false; //si el id es nulo se cancela
+        }
+
+        try {
+
+            Pista pista = em.find(Pista.class, idPista); //buscamos la pista por su id
+
+            if (pista != null) {
+                em.getTransaction().begin();
+                pista.setDisponible(seleccionado);
+                em.getTransaction().commit(); //comiteamos la transaccion
+                em.close();
+                return true;
+            } else {
+
+                em.close();
+                return false; //si no se encuentra la pista para
+
+            }
+
+
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 

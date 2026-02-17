@@ -33,6 +33,18 @@ public class Reserva {
     @Column(name = "precio", nullable = false, precision = 8, scale = 2)
     private BigDecimal precio;
 
+    public Reserva(Socio idSocio, Pista idPista, LocalDate fecha, LocalTime horaInicio, Integer duracionMin, BigDecimal precio) {
+        this.idSocio = idSocio;
+        this.idPista = idPista;
+        this.fecha = fecha;
+        this.horaInicio = horaInicio;
+        this.duracionMin = duracionMin;
+        this.precio = precio;
+    }
+
+    public Reserva() {
+    }
+
     public String getIdReserva() {
         return idReserva;
     }

@@ -9,8 +9,7 @@ public class Pista {
     @Id
     @Column(name = "id_pista", nullable = false, length = 36)
     private String idPista;
-
-    @Lob
+    
     @Column(name = "deporte", nullable = false)
     private String deporte;
 

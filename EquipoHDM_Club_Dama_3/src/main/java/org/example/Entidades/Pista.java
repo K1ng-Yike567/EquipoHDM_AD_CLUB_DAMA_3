@@ -9,7 +9,7 @@ public class Pista {
     @Id
     @Column(name = "id_pista", nullable = false, length = 36)
     private String idPista;
-    
+
     @Column(name = "deporte", nullable = false)
     private String deporte;
 
@@ -19,6 +19,16 @@ public class Pista {
     @ColumnDefault("1")
     @Column(name = "disponible", nullable = false)
     private Boolean disponible;
+
+    public Pista() {
+    }
+
+    public Pista(String idPista, String deporte, String descripcion, Boolean disponible) {
+        this.idPista = idPista;
+        this.deporte = deporte;
+        this.descripcion = descripcion;
+        this.disponible = disponible;
+    }
 
     public String getIdPista() {
         return idPista;

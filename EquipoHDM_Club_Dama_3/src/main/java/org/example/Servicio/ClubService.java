@@ -14,11 +14,12 @@ public class ClubService {
     public ClubService() {
         emf = Persistence.createEntityManagerFactory("club_damaPU");
     }
-
+    
+    // Métodos para cargar todos los datos en el DashBoard
 
     /**
-     * Métodos para cargar todos los datos en el DashBoard
-     * Author: Hugo Garrido Rojo
+     * Método que carga los datos de todos los ComboBox
+     * @Author Hugo Garrido Rojo
      */
     public void cargarDatosDashboard() {
         cargarSocios();
@@ -26,6 +27,11 @@ public class ClubService {
         cargarReservas();
     }
 
+    /**
+     * Método que carga los socios en el DashBoard
+     * @return Lista de socios
+     * @Author Hugo Garrido Rojo
+     */
     public static List<Socio> cargarSocios() {
 
         EntityManager em = emf.createEntityManager();
@@ -37,6 +43,11 @@ public class ClubService {
 
     }
 
+    /**
+     * Método que carga las pistas en el DashBoard
+     * @return Lista de pistas
+     * @Author Hugo Garrido Rojo
+     */
     public static List<Pista> cargarPistas() {
 
         EntityManager em = emf.createEntityManager();
@@ -48,6 +59,11 @@ public class ClubService {
 
     }
 
+    /**
+     * Método que carga las reservas en el DashBoard
+     * @return Lista de reservas
+     * @Author Hugo Garrido Rojo
+     */
     public static List<Reserva> cargarReservas() {
 
         EntityManager em = emf.createEntityManager();
@@ -59,11 +75,13 @@ public class ClubService {
 
     }
 
-    /**
-     * Métodos que gestionan los socios
-     * Author: Hugo Garrido Rojo
-     */
+    //Métodos que gestionan los socios
 
+    /**
+     * Método que inserta los socios en la BD
+     * @return diferentes cadenas de texto para validar excepciones o éxito de la operación
+     * @Author Hugo Garrido Rojo
+     */
     public String insertarSocio(Socio s) throws PersistenceException {
 
         EntityManager em = emf.createEntityManager();
@@ -84,6 +102,11 @@ public class ClubService {
 
     }
 
+    /**
+     * Método carga todos los ID de socios en el ComboBox de la ventana de baja para seleccionarlos
+     * @return lista de ID
+     * @Author Hugo Garrido Rojo
+     */
     public List<String> cargarSociosComboBox() {
 
         EntityManager em = emf.createEntityManager();
@@ -96,6 +119,11 @@ public class ClubService {
     }
 
 
+    /**
+     * Método que da de baja (elimina) un socio determinado en la BD
+     * @return diferentes cadenas de texto para validar excepciones o éxito de la operación
+     * @Author Hugo Garrido Rojo
+     */
     public String darDeBajaASocio(String idSocio) throws PersistenceException {
 
         EntityManager em = emf.createEntityManager();

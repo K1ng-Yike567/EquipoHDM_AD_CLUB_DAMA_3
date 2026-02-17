@@ -57,6 +57,7 @@ public class ClubService {
     public List<Reserva> reservasActivas() {
         EntityManager em = emf.createEntityManager();
         Query consulta = em.createNamedQuery("ReservasActivas");
+        em.close();
         return consulta.getResultList();
     }
 
@@ -70,6 +71,28 @@ public class ClubService {
         EntityManager em = emf.createEntityManager();
         Query consulta = em.createQuery("Select r from Reserva r where r.idSocio = :idSocio");
         consulta.setParameter("idSocio", idSocio);
+        em.close();
         return consulta.getResultList();
+    }
+
+    /**
+     * @author Milena
+     * Metodo para cancelar una reserva recibiendo un id de reserva y comprobando que no sea nulo,
+     * si es nulo return false. Si no es nulo se inicia la transaccion y lo elimina
+     * @param idReserva
+     * @return
+     */
+    public boolean cancelarReserva(String idReserva) {
+        if (idReserva.isEmpty()) {
+            return false;
+        } else {
+            EntityManager em = emf.createEntityManager();
+            Reserva reserva = em.find(Reserva.class, idReserva);
+            em.getTransaction().begin();
+            em.remove(reserva);
+            em.getTransaction().commit();
+            em.close();
+            return true;
+        }
     }
 }

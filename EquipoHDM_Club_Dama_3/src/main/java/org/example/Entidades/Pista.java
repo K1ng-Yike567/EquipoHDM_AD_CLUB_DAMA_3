@@ -20,6 +20,15 @@ public class Pista {
     @Column(name = "disponible", nullable = false)
     private Boolean disponible;
 
+    public Pista() {
+    }
+
+    public Pista(String deporte, String descripcion, Boolean disponible) {
+        this.deporte = deporte;
+        this.descripcion = descripcion;
+        this.disponible = disponible;
+    }
+
     public String getIdPista() {
         return idPista;
     }

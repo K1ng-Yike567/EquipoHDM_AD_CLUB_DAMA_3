@@ -1,17 +1,15 @@
 package org.example.Servicio;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.PersistenceException;
+import jakarta.persistence.*;
 import org.example.Entidades.Pista;
+import org.example.Entidades.Reserva;
+import org.example.Entidades.Socio;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClubService {
-    private EntityManagerFactory emf;
+    private static EntityManagerFactory emf;
 
     public ClubService() {
         this.emf = Persistence.createEntityManagerFactory("club_damaPU");
@@ -107,22 +105,6 @@ public class ClubService {
             return false;
         }
     }
-
-
-import jakarta.persistence.*;
-import org.example.Entidades.Pista;
-import org.example.Entidades.Reserva;
-import org.example.Entidades.Socio;
-
-import java.util.List;
-
-public class ClubService {
-
-    private static EntityManagerFactory emf;
-
-    public ClubService() {
-        emf = Persistence.createEntityManagerFactory("club_damaPU");
-    }
     
     // Métodos para cargar todos los datos en el DashBoard
 
@@ -131,9 +113,9 @@ public class ClubService {
      * @Author Hugo Garrido Rojo
      */
     public void cargarDatosDashboard() {
-        cargarSocios();
-        cargarPistas();
-        cargarReservas();
+        cargarSociosDashBoard();
+        cargarPistasDashBoard();
+        cargarReservasDashBoard();
     }
 
     /**
@@ -141,7 +123,7 @@ public class ClubService {
      * @return Lista de socios
      * @Author Hugo Garrido Rojo
      */
-    public static List<Socio> cargarSocios() {
+    public static List<Socio> cargarSociosDashBoard() {
 
         EntityManager em = emf.createEntityManager();
 
@@ -157,7 +139,7 @@ public class ClubService {
      * @return Lista de pistas
      * @Author Hugo Garrido Rojo
      */
-    public static List<Pista> cargarPistas() {
+    public static List<Pista> cargarPistasDashBoard() {
 
         EntityManager em = emf.createEntityManager();
 
@@ -173,7 +155,7 @@ public class ClubService {
      * @return Lista de reservas
      * @Author Hugo Garrido Rojo
      */
-    public static List<Reserva> cargarReservas() {
+    public static List<Reserva> cargarReservasDashBoard() {
 
         EntityManager em = emf.createEntityManager();
 

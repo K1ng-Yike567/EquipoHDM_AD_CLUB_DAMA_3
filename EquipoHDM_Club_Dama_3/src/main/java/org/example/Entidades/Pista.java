@@ -23,7 +23,8 @@ public class Pista {
     public Pista() {
     }
 
-    public Pista(String deporte, String descripcion, Boolean disponible) {
+    public Pista(String idPista, String deporte, String descripcion, Boolean disponible) {
+        this.idPista = idPista;
         this.deporte = deporte;
         this.descripcion = descripcion;
         this.disponible = disponible;

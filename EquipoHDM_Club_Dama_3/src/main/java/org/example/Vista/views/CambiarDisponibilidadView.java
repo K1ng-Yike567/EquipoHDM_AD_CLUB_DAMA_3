@@ -21,21 +21,21 @@ public class CambiarDisponibilidadView extends GridPane {
         addRow(1, new Label("Estado"), disponible);
         add(cambiar, 1, 2);
 
-//        id.getItems().addAll(club.cargarPistasCombobox());
-//
-//        cambiar.setOnAction(e -> {
-//            try {
-//
-//                if (club.cambiarDisponibilidadPista(id.getValue(), disponible.isSelected())) {
-//                    showInfo("Disponibilidad actualizada correctamente");
-//                } else {
-//                    showError("No ha seleccionado ninguna pista");
-//                }
-//
-//            } catch (Exception ex) {
-//                showError(ex.getMessage());
-//            }
-//        });
+        id.getItems().addAll(club.cargarPistasCombobox());
+
+        cambiar.setOnAction(e -> {
+            try {
+
+                if (club.cambiarDisponibilidadPista(id.getValue(), disponible.isSelected())) {
+                    showInfo("Disponibilidad actualizada correctamente");
+                } else {
+                    showError("No ha seleccionado ninguna pista");
+                }
+
+            } catch (Exception ex) {
+                showError(ex.getMessage());
+            }
+        });
     }
 
     private void showError(String msg) {

@@ -1,5 +1,6 @@
 package org.example.Vista.views;
 
+import org.example.Entidades.Pista;
 import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
@@ -24,18 +25,18 @@ public class PistaFormView extends GridPane {
         addRow(3, new Label("Operativa"), disponible);
         add(crear, 1, 4);
 
-//        crear.setOnAction(e -> {
-//            try {
-//             Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
-//             if(club.insertarPista(p)) {
-//                 showInfo("Pista insertada correctamente");
-//             } else {
-//                 showError("Pista no insertada correctamente. Asegúrese de que el ID no está repetido");
-//             }
-//            } catch (Exception ex) {
-//                showError(ex.getMessage());
-//            }
-//        });
+        crear.setOnAction(e -> {
+            try {
+             Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
+             if(club.insertarPista(p)) {
+                 showInfo("Pista insertada correctamente");
+             } else {
+                 showError("Pista no insertada correctamente. Asegúrese de que el ID no está repetido");
+             }
+            } catch (Exception ex) {
+                showError(ex.getMessage());
+            }
+        });
     }
 
     private void showError(String msg) {

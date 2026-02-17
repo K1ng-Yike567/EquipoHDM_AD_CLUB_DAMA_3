@@ -8,6 +8,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "reservas")
+@NamedQuery(name = "ReservasActivas", query = "select r from Reserva r join fetch r.idSocio join fetch r.idPista where r.fecha > current_date")
 public class Reserva {
     @Id
     @Column(name = "id_reserva", nullable = false, length = 36)

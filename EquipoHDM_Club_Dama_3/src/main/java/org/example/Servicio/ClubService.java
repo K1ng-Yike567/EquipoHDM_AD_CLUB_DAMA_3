@@ -4,14 +4,15 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
+import jakarta.persistence.Query;
 import org.example.Entidades.Pista;
 import org.example.Entidades.Reserva;
 import org.example.Entidades.Socio;
 
 import java.math.BigDecimal;
-import java.sql.Time;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 import java.time.LocalTime;
 import java.util.List;
 
@@ -48,7 +49,27 @@ public class ClubService {
         }
     }
 
-    public List<Reserva> cargarReservas() {
+    /**
+     * @author Milena
+     * Metodo para obtener las reservas activas
+     * @return
+     */
+    public List<Reserva> reservasActivas() {
+        EntityManager em = emf.createEntityManager();
+        Query consulta = em.createNamedQuery("ReservasActivas");
+        return consulta.getResultList();
+    }
 
+    /**
+     * @author Milena
+     * Metodo para listar las reservas por socio
+     * @param idSocio
+     * @return
+     */
+    public List<Reserva> reservasCliente(Integer idSocio) {
+        EntityManager em = emf.createEntityManager();
+        Query consulta = em.createQuery("Select r from Reserva r where r.idSocio = :idSocio");
+        consulta.setParameter("idSocio", idSocio);
+        return consulta.getResultList();
     }
 }

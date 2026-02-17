@@ -27,6 +27,19 @@ public class Socio {
     @Column(name = "email", length = 120)
     private String email;
 
+    public Socio(String idSocio, String dni, String nombre, String apellidos, String telefono, String email) {
+        this.idSocio = idSocio;
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.telefono = telefono;
+        this.email = email;
+    }
+
+    public Socio() {
+
+    }
+
     public String getIdSocio() {
         return idSocio;
     }

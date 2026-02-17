@@ -27,14 +27,23 @@ public class PistaFormView extends GridPane {
 
         crear.setOnAction(e -> {
             try {
-             Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
-             if(club.insertarPista(p)) {
-                 showInfo("Pista insertada correctamente");
-             } else {
-                 showError("Pista no insertada correctamente. Asegúrese de que el ID no está repetido");
-             }
+                // Validar que el ID no esté vacío
+                if (id.getText().trim().isEmpty()) {
+                    showError("El campo idPista es obligatorio");
+                    return;
+                }
+
+                // Crear el objeto con los 4 parámetros
+                Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
+
+                // Llamada al servicio
+                if(club.insertarPista(p)) {
+                    showInfo("Pista insertada correctamente");
+                } else {
+                    showError("No se pudo insertar. Es posible que el ID ya exista.");
+                }
             } catch (Exception ex) {
-                showError(ex.getMessage());
+                showError("Error inesperado: " + ex.getMessage());
             }
         });
     }

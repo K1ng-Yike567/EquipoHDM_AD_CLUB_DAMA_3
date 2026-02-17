@@ -48,6 +48,13 @@ public class ClubService {
         EntityManager em = emf.createEntityManager();
 
         try {
+
+            //campo ID vacío
+            if (pista.getIdPista().isEmpty()) {
+                em.close();
+                return false;
+            }
+
             //si la pista ya existe no la inserta
             if (em.find(Pista.class, pista.getIdPista()) != null) {
                 em.close();

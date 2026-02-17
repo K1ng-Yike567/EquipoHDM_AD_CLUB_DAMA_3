@@ -7,6 +7,7 @@ import jakarta.persistence.PersistenceException;
 import org.example.Entidades.Pista;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClubService {
@@ -27,7 +28,11 @@ public class ClubService {
     public List<Pista> cargarPistas() throws PersistenceException {
         EntityManager em = emf.createEntityManager();
 
-        List<Pista> pistas = em.createQuery("SELECT p FROM Pista p", Pista.class).getResultList();
+        List<Pista> pistas = new ArrayList<>();
+
+        //consulta para obtener las instancias de la entidad Pista
+        pistas = em.createQuery("SELECT p FROM Pista p", Pista.class).getResultList();
+
         em.close();
         return pistas;
     }
@@ -51,6 +56,7 @@ public class ClubService {
                 return false;
             }
 
+            //si no existe la inserta
             em.getTransaction().begin();
             em.persist(pista);
             em.getTransaction().commit();

@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10795d85-7b22-4764-addc-cbab779d0ae8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/BajaSocioView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/BajaSocioView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,24 +21,24 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "K1ng-Yike567"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;K1ng-Yike567&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/K1ng-Yike567/EquipoHDM_AD_CLUB_DAMA_3.git",
-    "accountId": "f505b850-43cb-4623-beb5-92b7de053732"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/K1ng-Yike567/EquipoHDM_AD_CLUB_DAMA_3.git&quot;,
+    &quot;accountId&quot;: &quot;f505b850-43cb-4623-beb5-92b7de053732&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="39o98v7n3enGrhQ6zm8hzqgkO3w" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -94,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771351400812</updated>
       <workItem from="1771351401835" duration="1278000" />
+      <workItem from="1771353665802" duration="55000" />
     </task>
     <servers />
   </component>

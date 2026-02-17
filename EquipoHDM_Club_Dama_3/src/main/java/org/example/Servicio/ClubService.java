@@ -69,9 +69,24 @@ public class ClubService {
     }
 
     /**
+     * Obtiene una lista pista para cargar en un combobox.
+     * @return devuelve una lista de Strings con los ids de las pistas.
+     * @author Daniel
+     */
+    public List<String> cargarPistasCombobox() {
+        EntityManager em = emf.createEntityManager();
+
+        Query q = em.createQuery("select p.id from Pista p");
+        List<String> pistas = q.getResultList();
+
+        return pistas;
+    }
+
+
+    /**
      * Modifica el estado de la disponibilidad de la pista
      *
-     * @param idPista El id de la pista a modificar.
+     * @param idPista      El id de la pista a modificar.
      * @param seleccionado El nuevo estado de disponibilidad.
      * @return Devuelve true si se modifico correctamente, false si no.
      * @Author Daniel

@@ -1,5 +1,7 @@
 package org.example.Vista.views;
 
+import jakarta.persistence.PersistenceException;
+import org.example.Entidades.Socio;
 import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
@@ -29,15 +31,18 @@ public class SocioFormView extends GridPane {
         addRow(5, new Label("Email"), email);
         add(crear, 1, 6);
 
-//        crear.setOnAction(e -> {
-//            try {
-//                  Socio s = new Socio(id.getText(), dni.getText(), nombre.getText(), apellidos.getText(), tel.getText(), email.getText());
-//               if (club.insertarSocio(s)) showInfo("Socio insertado correctametne");
-//                else showError("Socio no insertado correctamente. Asegúrese de que el ID no está repetido");
-//            } catch (Exception ex) {
-//                showError(ex.getMessage());
-//            }
-//        });
+        crear.setOnAction(e -> {
+            try {
+                Socio s = new Socio(id.getText(), dni.getText(), nombre.getText(), apellidos.getText(), tel.getText(), email.getText());
+                if (club.insertarSocio(s).equals("inserción validada")) {
+                    showInfo("Socio insertado en la base de datos con éxito");
+                } else if (club.insertarSocio(s).equals("ID vacío")) {
+                    showError("Error. El campo de 'idSocio' no puede estar vacío");
+                }
+            } catch (PersistenceException ex) {
+                showError("Error al subir el socio a la base de datos");
+            }
+        });
     }
     private void showError(String msg) {
         Alert a = new Alert(Alert.AlertType.ERROR, msg, ButtonType.OK);

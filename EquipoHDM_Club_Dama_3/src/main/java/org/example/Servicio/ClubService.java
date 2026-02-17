@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ClubService {
-    EntityManagerFactory emf;
+    private EntityManagerFactory emf;
 
     public ClubService() {
         this.emf = Persistence.createEntityManagerFactory("club_damaPU");
@@ -19,6 +19,7 @@ public class ClubService {
     /**
      * Obtiene todas las pistas almacenadas en la base de datos
      * Utiliza JPQL para que peuda recuperar las entidades Pista sin necesidad de SQL manual.
+     *
      * @returnv devuelve una lista de objetos tipo Pista
      * @author Daniel
      */
@@ -28,6 +29,38 @@ public class ClubService {
         List<Pista> pistas = em.createQuery("SELECT p FROM Pista p", Pista.class).getResultList();
         em.close();
         return pistas;
+    }
+
+    /**
+     * Inserta una nueva pista en la base de datos.
+     * Primero comprueba si ya existe una pista con el mismo id.
+     * Si no existe inicia transaccion y persiste
+     *
+     * @param pista Objeto Pista a registrar.
+     * @return true si se ha insertado correctamente, false si no.
+     * @author Daniel
+     */
+    public boolean insertarPista(Pista pista) {
+        EntityManager em = emf.createEntityManager();
+
+        try {
+            //si la pista ya existe no la inserta
+            if (em.find(Pista.class, pista.getIdPista()) != null) {
+                em.close();
+                return false;
+            }
+
+            em.getTransaction().begin();
+            em.persist(pista);
+            em.getTransaction().commit();
+            em.close();
+            return true;
+
+        } catch (Exception e) {
+            em.close();
+            return false;
+        }
+
     }
 
 

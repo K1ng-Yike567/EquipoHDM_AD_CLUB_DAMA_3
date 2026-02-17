@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="10795d85-7b22-4764-addc-cbab779d0ae8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/BajaSocioView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/BajaSocioView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Hugo-Garrido" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "K1ng-Yike567"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/K1ng-Yike567/EquipoHDM_AD_CLUB_DAMA_3.git",
+    "accountId": "f505b850-43cb-4623-beb5-92b7de053732"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="39o98v7n3enGrhQ6zm8hzqgkO3w" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainApp.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Hugo/Documents/GitHub/EquipoHDM_AD_CLUB_DAMA_3/EquipoHDM_Club_Dama_3",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="CLUB DAMA" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.example.Vista.MainApp" />
+      <module name="EquipoHDM_Club_Dama_3" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Hugo\Downloads\openjfx-24.0.2_windows-x64_bin-sdk\javafx-sdk-24.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="10795d85-7b22-4764-addc-cbab779d0ae8" name="Changes" comment="" />
+      <created>1771351400812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771351400812</updated>
+      <workItem from="1771351401835" duration="1278000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,7 +1,6 @@
 package org.example.Vista.views;
 
-import modelo.*;
-import servicio.ClubDeportivo;
+import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -9,7 +8,7 @@ import javafx.scene.layout.GridPane;
 import java.util.function.Consumer;
 
 public class SocioFormView extends GridPane {
-    public SocioFormView(ClubDeportivo club) {
+    public SocioFormView(ClubService club) {
         setPadding(new Insets(12));
         setHgap(8);
         setVgap(8);
@@ -30,15 +29,15 @@ public class SocioFormView extends GridPane {
         addRow(5, new Label("Email"), email);
         add(crear, 1, 6);
 
-        crear.setOnAction(e -> {
-            try {
-                  Socio s = new Socio(id.getText(), dni.getText(), nombre.getText(), apellidos.getText(), tel.getText(), email.getText());
-               if (club.insertarSocio(s)) showInfo("Socio insertado correctametne");
-                else showError("Socio no insertado correctamente. Asegúrese de que el ID no está repetido");
-            } catch (Exception ex) {
-                showError(ex.getMessage());
-            }
-        });
+//        crear.setOnAction(e -> {
+//            try {
+//                  Socio s = new Socio(id.getText(), dni.getText(), nombre.getText(), apellidos.getText(), tel.getText(), email.getText());
+//               if (club.insertarSocio(s)) showInfo("Socio insertado correctametne");
+//                else showError("Socio no insertado correctamente. Asegúrese de que el ID no está repetido");
+//            } catch (Exception ex) {
+//                showError(ex.getMessage());
+//            }
+//        });
     }
     private void showError(String msg) {
         Alert a = new Alert(Alert.AlertType.ERROR, msg, ButtonType.OK);

@@ -1,7 +1,6 @@
 package org.example.Vista.views;
 
-import modelo.*;
-import servicio.ClubDeportivo;
+import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -12,7 +11,7 @@ import java.time.LocalTime;
 
 
 public class ReservaFormView extends GridPane {
-    public ReservaFormView(ClubDeportivo club) throws SQLException {
+    public ReservaFormView(ClubService club) throws SQLException {
         setPadding(new Insets(12));
         setHgap(8); setVgap(8);
 
@@ -34,32 +33,32 @@ public class ReservaFormView extends GridPane {
         addRow(6, new Label("Precio (€)"), precio);
         add(crear, 1, 7);
 
-        idSocio.getItems().addAll(club.cargarSociosCombobox());
-        idPista.getItems().addAll(club.cargarPistasCombobox());
-
-        crear.setOnAction(e -> {
-            try {
-                LocalTime t = LocalTime.parse(hora.getText());
-
-              Reserva r = new Reserva(id.getText(), idSocio.getValue(), idPista.getValue(),
-                      fecha.getValue(), t, duracion.getValue(), Double.parseDouble(precio.getText()));
-
-              if (club.insertarReserva(r).equals("Reserva validada")) {
-                  showInfo("Reserva insertada correctamente");
-              } else if (club.insertarReserva(r).equals("Id Existente")) {
-                  showError("Reserva no insertada correctamente. Asegúrese de que el ID no está repetido");
-              } else if (club.insertarReserva(r).equals("Fecha anterior")) {
-                  showError("Reserva no insertada correctamente. La fecha de reserva introducida es anterior a la actual");
-              } else  if (club.insertarReserva(r).equals("Pista no disponible")) {
-                  showError("Reserva no insertada correctamente. La pista seleccionada no está disponible en este momento");
-              } else if (club.insertarReserva(r).equals("Fecha de pista no válida")) {
-                  showError("Reserva no insertada correctamente. Esta pista ya está asignada a otra reserva en este momento");
-              }
-
-            } catch (Exception ex) {
-                showError(ex.getMessage());
-            }
-        });
+//        idSocio.getItems().addAll(club.cargarSociosCombobox());
+//        idPista.getItems().addAll(club.cargarPistasCombobox());
+//
+//        crear.setOnAction(e -> {
+//            try {
+//                LocalTime t = LocalTime.parse(hora.getText());
+//
+//              Reserva r = new Reserva(id.getText(), idSocio.getValue(), idPista.getValue(),
+//                      fecha.getValue(), t, duracion.getValue(), Double.parseDouble(precio.getText()));
+//
+//              if (club.insertarReserva(r).equals("Reserva validada")) {
+//                  showInfo("Reserva insertada correctamente");
+//              } else if (club.insertarReserva(r).equals("Id Existente")) {
+//                  showError("Reserva no insertada correctamente. Asegúrese de que el ID no está repetido");
+//              } else if (club.insertarReserva(r).equals("Fecha anterior")) {
+//                  showError("Reserva no insertada correctamente. La fecha de reserva introducida es anterior a la actual");
+//              } else  if (club.insertarReserva(r).equals("Pista no disponible")) {
+//                  showError("Reserva no insertada correctamente. La pista seleccionada no está disponible en este momento");
+//              } else if (club.insertarReserva(r).equals("Fecha de pista no válida")) {
+//                  showError("Reserva no insertada correctamente. Esta pista ya está asignada a otra reserva en este momento");
+//              }
+//
+//            } catch (Exception ex) {
+//                showError(ex.getMessage());
+//            }
+//        });
     }
 
     private void showError(String msg) {

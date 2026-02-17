@@ -1,7 +1,6 @@
 package org.example.Vista.views;
 
-import modelo.*;
-import servicio.ClubDeportivo;
+import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 import java.util.function.Consumer;
 
 public class CancelarReservaView extends GridPane {
-    public CancelarReservaView(ClubDeportivo club) throws SQLException {
+    public CancelarReservaView(ClubService club) throws SQLException {
         setPadding(new Insets(12));
         setHgap(8);
         setVgap(8);
@@ -22,21 +21,21 @@ public class CancelarReservaView extends GridPane {
         add(cancelar, 1, 1);
 
         //llamada al metodo del modelo para cargar las reservas en el combobox
-        id.getItems().addAll(club.cargarReservasCombobox());
-
-        cancelar.setOnAction(e -> {
-            try {
-
-                if (club.cancelarReserva(id.getValue())) {
-                    showInfo("Reserva cancelada con éxito");
-                } else {
-                    showError("No ha seleccionado ninguna reserva");
-                }
-
-            } catch (Exception ex) {
-                showError(ex.getMessage());
-            }
-        });
+//        id.getItems().addAll(club.cargarReservasCombobox());
+//
+//        cancelar.setOnAction(e -> {
+//            try {
+//
+//                if (club.cancelarReserva(id.getValue())) {
+//                    showInfo("Reserva cancelada con éxito");
+//                } else {
+//                    showError("No ha seleccionado ninguna reserva");
+//                }
+//
+//            } catch (Exception ex) {
+//                showError(ex.getMessage());
+//            }
+//        });
     }
 
     private void showError(String msg) {

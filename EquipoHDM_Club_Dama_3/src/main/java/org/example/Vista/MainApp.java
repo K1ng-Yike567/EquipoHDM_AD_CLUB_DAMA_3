@@ -1,8 +1,7 @@
 package org.example.Vista;
 
-import modelo.*;
-import servicio.ClubDeportivo;
-import vista.views.*;
+import org.example.Servicio.ClubService;
+import org.example.Vista.views.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -16,21 +15,16 @@ import java.sql.SQLException;
 
 public class MainApp extends Application {
 
-    private ClubDeportivo club;
+    private ClubService club;
     private BorderPane root;
     private Label status;
 
     @Override
     public void start(Stage stage)  {
-        try {
-            club = new ClubDeportivo();
 
-            club.cargarSocios();
-            club.cargarPistas();
-            club.cargarReservas();
-        } catch (SQLException e) {
-           showError("Error de conexion" + e.getMessage());
-        }
+        club = new ClubService();
+
+
         root = new BorderPane();
         root.setTop(buildMenuBar());
         status = new Label("Listo");

@@ -1,7 +1,6 @@
 package org.example.Vista.views;
 
-import modelo.*;
-import servicio.ClubDeportivo;
+import org.example.Servicio.ClubService;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -9,7 +8,7 @@ import javafx.scene.layout.GridPane;
 import java.util.function.Consumer;
 
 public class PistaFormView extends GridPane {
-    public PistaFormView(ClubDeportivo club) {
+    public PistaFormView(ClubService club) {
         setPadding(new Insets(12));
         setHgap(8); setVgap(8);
 
@@ -25,18 +24,18 @@ public class PistaFormView extends GridPane {
         addRow(3, new Label("Operativa"), disponible);
         add(crear, 1, 4);
 
-        crear.setOnAction(e -> {
-            try {
-             Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
-             if(club.insertarPista(p)) {
-                 showInfo("Pista insertada correctamente");
-             } else {
-                 showError("Pista no insertada correctamente. Asegúrese de que el ID no está repetido");
-             }
-            } catch (Exception ex) {
-                showError(ex.getMessage());
-            }
-        });
+//        crear.setOnAction(e -> {
+//            try {
+//             Pista p = new Pista(id.getText(), deporte.getText(), descripcion.getText(), disponible.isSelected());
+//             if(club.insertarPista(p)) {
+//                 showInfo("Pista insertada correctamente");
+//             } else {
+//                 showError("Pista no insertada correctamente. Asegúrese de que el ID no está repetido");
+//             }
+//            } catch (Exception ex) {
+//                showError(ex.getMessage());
+//            }
+//        });
     }
 
     private void showError(String msg) {

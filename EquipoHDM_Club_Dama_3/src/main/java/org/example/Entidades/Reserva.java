@@ -8,6 +8,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "reservas")
+@NamedQuery(name = "ReservasActivas", query = "select r from Reserva r join fetch r.idSocio join fetch r.idPista where r.fecha > current_date")
 public class Reserva {
     @Id
     @Column(name = "id_reserva", nullable = false, length = 36)
@@ -32,6 +33,19 @@ public class Reserva {
 
     @Column(name = "precio", nullable = false, precision = 8, scale = 2)
     private BigDecimal precio;
+
+    public Reserva(String idReserva, Socio idSocio, Pista idPista, LocalDate fecha, LocalTime horaInicio, Integer duracionMin, BigDecimal precio) {
+        this.idReserva = idReserva;
+        this.idSocio = idSocio;
+        this.idPista = idPista;
+        this.fecha = fecha;
+        this.horaInicio = horaInicio;
+        this.duracionMin = duracionMin;
+        this.precio = precio;
+    }
+
+    public Reserva() {
+    }
 
     public String getIdReserva() {
         return idReserva;

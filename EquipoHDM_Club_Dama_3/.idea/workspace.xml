@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10795d85-7b22-4764-addc-cbab779d0ae8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Pista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Pista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Servicio/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Servicio/ClubService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,10 @@
     &quot;accountId&quot;: &quot;f505b850-43cb-4623-beb5-92b7de053732&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -46,12 +54,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CLUB DAMA.executor": "Run",
     "Application.MainApp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Hugo-Garrido",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Hugo/Documents/GitHub/EquipoHDM_AD_CLUB_DAMA_3/EquipoHDM_Club_Dama_3",
     "nodejs_package_manager_path": "npm",
@@ -59,6 +69,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -87,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771351400812</updated>
       <workItem from="1771351401835" duration="1278000" />
-      <workItem from="1771353665802" duration="55000" />
+      <workItem from="1771353665802" duration="1307000" />
     </task>
     <servers />
   </component>

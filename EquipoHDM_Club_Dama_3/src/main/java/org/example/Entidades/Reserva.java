@@ -34,7 +34,8 @@ public class Reserva {
     @Column(name = "precio", nullable = false, precision = 8, scale = 2)
     private BigDecimal precio;
 
-    public Reserva(Socio idSocio, Pista idPista, LocalDate fecha, LocalTime horaInicio, Integer duracionMin, BigDecimal precio) {
+    public Reserva(String idReserva, Socio idSocio, Pista idPista, LocalDate fecha, LocalTime horaInicio, Integer duracionMin, BigDecimal precio) {
+        this.idReserva = idReserva;
         this.idSocio = idSocio;
         this.idPista = idPista;
         this.fecha = fecha;

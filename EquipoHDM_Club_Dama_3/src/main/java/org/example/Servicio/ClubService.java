@@ -31,7 +31,7 @@ public class ClubService {
      * Metodo para insertar una reserva, si el idPista o el idSocio es null return false,
      * si no es null persistimos el objeto
      */
-    public boolean insertarReserva(Integer idPista, Integer idSocio, LocalDate fechaReserva, LocalTime horaReserva, Integer duracion, BigDecimal precio) {
+    public boolean insertarReserva(String idReserva, Integer idPista, Integer idSocio, LocalDate fechaReserva, LocalTime horaReserva, Integer duracion, BigDecimal precio) {
         EntityManager em = emf.createEntityManager();
         Pista pista = em.find(Pista.class, idPista);
         Socio socio = em.find(Socio.class, idSocio);
@@ -40,7 +40,7 @@ public class ClubService {
             return false;
 
         } else {
-            Reserva reserva = new Reserva(socio, pista, fechaReserva, horaReserva, duracion, precio);
+            Reserva reserva = new Reserva(idReserva, socio, pista, fechaReserva, horaReserva, duracion, precio);
             em.getTransaction().begin();
             em.persist(reserva);
             em.getTransaction().commit();

@@ -22,6 +22,7 @@ public class MainApp extends Application {
 
         club = new ClubService();
 
+        club.cargarDatosDashboard();
 
         root = new BorderPane();
         root.setTop(buildMenuBar());

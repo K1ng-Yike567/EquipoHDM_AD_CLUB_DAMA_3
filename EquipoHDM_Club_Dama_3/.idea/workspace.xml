@@ -5,18 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10795d85-7b22-4764-addc-cbab779d0ae8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Servicio/DeporteConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Pista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Pista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entidades/Reserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Servicio/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Servicio/ClubService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CambiarDisponibilidadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/CancelarReservaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/PistaFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/ReservaFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/views/SocioFormView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Entidades/Pista.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Entidades/Pista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Entidades/Reserva.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Entidades/Reserva.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Entidades/Socio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Entidades/Socio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Servicio/ClubService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Servicio/ClubService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/BajaSocioView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/BajaSocioView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/CambiarDisponibilidadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/CambiarDisponibilidadView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/CancelarReservaView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/CancelarReservaView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/DashboardView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/DashboardView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/PistaFormView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/PistaFormView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/ReservaFormView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/ReservaFormView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Vista/views/SocioFormView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Vista/views/SocioFormView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Hugo-Garrido" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,6 +73,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="39o98v7n3enGrhQ6zm8hzqgkO3w" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -99,6 +131,7 @@
       <updated>1771351400812</updated>
       <workItem from="1771351401835" duration="1278000" />
       <workItem from="1771353665802" duration="1307000" />
+      <workItem from="1771423883796" duration="1904000" />
     </task>
     <servers />
   </component>

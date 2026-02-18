@@ -21,21 +21,21 @@ public class CancelarReservaView extends GridPane {
         add(cancelar, 1, 1);
 
         //llamada al metodo del modelo para cargar las reservas en el combobox
-//        id.getItems().addAll(club.cargarReservasCombobox());
-//
-//        cancelar.setOnAction(e -> {
-//            try {
-//
-//                if (club.cancelarReserva(id.getValue())) {
-//                    showInfo("Reserva cancelada con éxito");
-//                } else {
-//                    showError("No ha seleccionado ninguna reserva");
-//                }
-//
-//            } catch (Exception ex) {
-//                showError(ex.getMessage());
-//            }
-//        });
+        id.getItems().addAll(club.cargarReservasComboBox());
+
+        cancelar.setOnAction(e -> {
+            try {
+
+                if (club.cancelarReserva(id.getValue())) {
+                    showInfo("Reserva cancelada con éxito");
+                } else {
+                    showError("No ha seleccionado ninguna reserva");
+                }
+
+            } catch (Exception ex) {
+                showError("Error desconocido al intentar eliminar la reserva de la base de datos");
+            }
+        });
     }
 
     private void showError(String msg) {
